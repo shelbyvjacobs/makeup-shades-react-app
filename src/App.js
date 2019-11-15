@@ -2,16 +2,18 @@ import React, {Component} from 'react';
 import './App.css';
 import Nav from './components/Nav/Nav'
 import Body from './components/Body/Body'
+import { Route, Link } from "react-router-dom";
 
 class App extends Component {
   constructor(props){
     super(props);
+    this.state = { shades: [] };
 
-    this.state = {
-      apiUrl: "http://localhost:4000/shades",
-      proxyUrl: "https://cors-anywhere.herokuapp.com/",
-      shades: []
-    };
+    // this.state = {
+    //   apiUrl: "http://localhost:4000/shades",
+    //   proxyUrl: "https://cors-anywhere.herokuapp.com/",
+    //   shades: []
+    // };
     this.componentDidMount = this.componentDidMount.bind(this);
   }
 
@@ -24,7 +26,7 @@ class App extends Component {
         )
         .then(res => res.json())
         .then(res => {
-          this.setState({ shades: res });
+          this.setState({ shades: res.data });
           console.log(res);
         }) 
         .catch(err => console.log(err)); 
@@ -33,15 +35,13 @@ class App extends Component {
 
     render(){
         return (
-            <div className="Nav">
               <div className="App">
                 <Nav />
-                <Body />
+                <Body {...this.state} />
                 <header className="App-header">
                   <h1>Makeup Shades</h1>
                 </header>
               </div>
-            </div>
         )
     }
 }

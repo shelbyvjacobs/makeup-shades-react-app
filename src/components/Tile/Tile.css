@@ -1,0 +1,21 @@
+.Tile {
+    /* background-color: #f3cfb3; */
+    width: 19%;
+    padding-top: 19%;
+    position: relative;
+    display: inline-block;
+    margin: 0 2px auto;
+}
+
+.Tile:hover {
+    opacity: 0.5;
+    cursor: crosshair;
+}
+
+p {
+    position: absolute;
+    top: 0;
+    left: 5px;
+    bottom: 0;
+    right: 0;
+}
