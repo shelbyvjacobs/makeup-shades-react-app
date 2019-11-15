@@ -1,19 +1,21 @@
 .Body {
-    position: absolute;
-    left: 90px;
-    top: 65px;
-    width: 85vw;
-    height: 700px;
-    /* border: 1px solid black; */
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-content: flex-start;
+    width: 80%;
+    margin-left: 100px;
 }
 
 .Tile {
-    /* background-color: #f3cfb3; */
+    background-color: #f3cfb3;
     width: 19%;
     padding-top: 19%;
+    top: 65px;
     position: relative;
     display: inline-block;
-    margin: 0 2px auto;
+    margin: 0 auto;
 }
 
 .Tile:hover {
@@ -27,8 +29,4 @@ p {
     left: 5px;
     bottom: 0;
     right: 0;
-}
-
-h2 {
-    color: red;
 }

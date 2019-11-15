@@ -7,13 +7,11 @@ import { Route, Link } from "react-router-dom";
 class App extends Component {
   constructor(props){
     super(props);
-    this.state = { shades: [] };
-
-    // this.state = {
-    //   apiUrl: "http://localhost:4000/shades",
-    //   proxyUrl: "https://cors-anywhere.herokuapp.com/",
-    //   shades: []
-    // };
+    this.state = {
+      apiUrl: "http://localhost:4000/shades",
+      proxyUrl: "https://cors-anywhere.herokuapp.com/",
+      shades: []
+    };
     this.componentDidMount = this.componentDidMount.bind(this);
   }
 
@@ -26,7 +24,7 @@ class App extends Component {
         )
         .then(res => res.json())
         .then(res => {
-          this.setState({ shades: res.data });
+          this.setState({ shades: res });
           console.log(res);
         }) 
         .catch(err => console.log(err)); 
@@ -37,7 +35,7 @@ class App extends Component {
         return (
               <div className="App">
                 <Nav />
-                <Body {...this.state} />
+                <Body shades={this.state.shades} />
                 <header className="App-header">
                   <h1>Makeup Shades</h1>
                 </header>
