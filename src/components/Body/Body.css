@@ -1,0 +1,8 @@
+.Body {
+    position: absolute;
+    left: 90px;
+    top: 65px;
+    width: 90%;
+    height: 700px;
+    border: 1px solid black;
+}

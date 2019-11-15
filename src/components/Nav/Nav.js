@@ -7,26 +7,12 @@ class Nav extends Component {
       super(props);
   
       this.state = {
-        apiUrl: "http://localhost:4000/shades",
-        shades: []
+
       };
-      this.componentDidMount = this.componentDidMount.bind(this);
+      //bind here
     }
-  
-      componentDidMount(){
-          fetch ('http://localhost:4000/shades', {
-            headers: {
-              'Accept': "application/json"
-            }
-          }
-          )
-          .then(res => res.json())
-          .then(res => {
-            this.setState({ shades: res });
-          }) 
-          .catch(err => console.log(err)); 
-        }
-  
+
+    // functionality here
   
       render(){
           return (
