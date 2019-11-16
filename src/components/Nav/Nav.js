@@ -1,26 +1,49 @@
-import React, {Component} from 'react';
-import "./Nav.css"
+import React, { Component } from 'react';
+import './Nav.css';
 
-// class component
 class Nav extends Component {
-    constructor(props){
-      super(props);
-  
-      this.state = {
+    constructor() {
+        super();
 
-      };
-      //bind here
+        this.state = {
+            showForm: false
+        };
     }
 
-    // functionality here
-  
-      render(){
-          return (
-              <div className="Nav">
-                  <nav>&#9776;</nav>
-              </div>
-          )
-      }
-  }
+    showForm() {
+        this.setState({
+            showForm: !this.state.showForm
+        });
+    }
+
+    render() {
+
+        let linksMarkup = this.props.links.map((link, index) => {
+            let linkMarkup = link.active ? (
+                <a className="MenuLink" href={link.link}>{link.label}</a>
+            ) : (
+                <a className="MenuLink" href={link.link}>{link.label}</a>
+            );
+
+            return (
+                <li key={index} className="MenuListItem">
+                    {linkMarkup}
+                </li>
+            );
+        });
+
+        return (
+            <nav className="Nav">
+                <div className="Hamburger"></div>
+
+                <div className="Menu">
+                    <ul className="MenuList">
+                        {linksMarkup}
+                    </ul>
+                </div>
+            </nav>
+        );
+    }
+}
 
 export default Nav;

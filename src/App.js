@@ -32,11 +32,19 @@ class App extends Component {
 
 
     render(){
+
+      let links = [
+        { label: 'Home', link: '#home', active: true },
+        { label: 'About', link: '#about' },
+        { label: 'Portfolio', link: '#portfolio' },
+        { label: 'Contact Us', link: '#contact-us' },
+      ];
+
         return (
               <div className="App">
-                <Nav />
+                <Nav links={links} />
                 <Body shades={this.state.shades} />
-                <header className="App-header">
+                <header className="Header">
                   <h1>Makeup Shades</h1>
                 </header>
               </div>

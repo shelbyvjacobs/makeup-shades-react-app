@@ -1,4 +1,4 @@
-nav {
+.Nav {
     background-color: black;
     color: white;
     font-size: 25px;
@@ -10,4 +10,95 @@ nav {
     display: block;
     width: 100vw;
     height: 30px;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+}
+
+.Hamburger,
+.Hamburger::before,
+.Hamburger::after {
+    background-color: white;
+    width: 40px;
+    height: 4px;
+    border-radius: 2px;
+}
+
+.Hamburger::before,
+.Hamburger::after {
+    content: '';
+    position: absolute;
+    right: 0;
+}
+
+.Hamburger::before {
+    top: 10px;
+}
+
+.Hamburger::after {
+    top: 20px;
+}
+
+.Hamburger {
+    display: block;
+    position: relative;
+    top: 5px;
+    left: 90vw;
+}
+
+.Menu {
+    background-color: white;
+    font-weight: bold;
+    box-shadow: 0px 2px 24px 0px rgba(0, 0, 0, 0.15);
+    border-radius: 8px;
+    width: 90vw;
+    height: 80px;
+    z-index: 1;
+    display: flex;
+    justify-content: space-between;
+    padding: 0 40px;
+    position: relative;
+    display: none;
+}
+
+.MenuRight {
+    display: flex;
+    align-items: center;
+    height: 100%;
+}
+
+.MenuList {
+    list-style-type: none;
+    padding: 0;
+    height: 100%;
+    margin: 0;
+    margin-right: 40px;
+}
+
+.MenuListItem {
+    display: inline-block;
+    height: 100%;
+    margin-right: 20px;
+}
+
+.MenuListItem:last-child {
+    margin-right: 0;
+}
+
+.MenuLink {
+    display: inline-block;
+    height: 100%;
+    font-size: 16px;
+    text-decoration: none;
+    text-transform: uppercase;
+    display: flex;
+    align-items: center;
+    padding: 0 3px;
+}
+
+.MenuLink:hover {
+    color: gray;
+    cursor: crosshair;
 }
