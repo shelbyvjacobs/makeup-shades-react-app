@@ -1,6 +1,9 @@
 import React, {Component} from 'react';
 import './App.css';
 import Body from './components/Body/Body';
+import Brand from './components/Brand/Brand';
+import Product from './components/Product/Product';
+import Country from './components/Country/Country';
 import { Route, Link, Switch, Redirect } from "react-router-dom";
 
 class App extends Component {
@@ -49,7 +52,7 @@ class App extends Component {
                         />
                       )}
                     />
-                    {/* <Route
+                    <Route
                       path="/brand"
                       render={routerProps => (
                         <Brand />
@@ -66,7 +69,7 @@ class App extends Component {
                       render={routerProps => (
                         <Country />
                       )}
-                    /> */}
+                    />
                   </Switch>
                   <header className="Header">
                     <h1>Makeup Shades</h1>
