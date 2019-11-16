@@ -13,3 +13,75 @@ h1 {
   font-size: 80px;
   font-family: 'Montserrat', sans-serif;
 }
+
+.Body {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  align-content: flex-start;
+}
+
+.Tile {
+  width: 75%;
+  height: 50px;
+  top: 40px;
+  position: relative;
+  display: inline-block;
+  margin: 0 auto;
+  transition: 0.4s;
+}
+
+.Tile:hover {
+  height: 300px;
+  cursor: crosshair;
+}
+
+p {
+  position: absolute;
+  top: 0;
+  left: 5px;
+  bottom: 0;
+  right: 0;
+  font-family: 'Courier New', Courier, monospace;
+}
+
+.Menu {
+  background-color: black;
+  color: white;
+  display: flex;
+  justify-content: space-evenly;
+  position: relative;
+  height: 80px;
+  width: 100vw;
+}
+
+a:hover {
+  cursor: crosshair;
+  border-bottom: 15px solid white;
+}
+
+a {
+  color: white;
+  font-size: 16px;
+  text-decoration: none;
+  text-transform: uppercase;
+  display: flex;
+  justify-content: center;
+  transition: 0.4s;
+}
+
+.link {
+  color: black;
+  position: absolute;
+  top: 150px;
+  text-transform: none;
+}
+
+.link:hover {
+  color: grey;
+}
+
+.NavLink {
+  margin-top: 40px;
+  font-size: 20px;
+}

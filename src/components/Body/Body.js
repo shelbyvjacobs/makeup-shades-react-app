@@ -1,7 +1,4 @@
 import React from 'react';
-import "./Body.css";
-import { Link } from "react-router-dom"
-import { conditionalExpression } from '@babel/types';
 
 export default function Body(props) {
     let tileList = props.shades.map(shades => {
@@ -12,6 +9,7 @@ export default function Body(props) {
             <div className="Body">
                 <div className="Tile" style={tileStyle} key={shades.id}>
                     <p>{shades.hex}</p>
+                    {/* make each p tag into a link to the page for that hex */}
                 </div>
             </div>
         );

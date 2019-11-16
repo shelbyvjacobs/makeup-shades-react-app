@@ -1,7 +1,6 @@
 import React from 'react';
 import "./Brand.css";
 import { Link } from "react-router-dom"
-import { conditionalExpression } from '@babel/types';
 
 export default function Brand(props) {
     // let brandList = props.shades.map(brands => {

@@ -34,10 +34,10 @@ class App extends Component {
               <div className="App">
 
                 <nav className="Menu">
-                  <Link to="/">Shades</Link>
-                  <Link to="/brand">Brands</Link>
-                  <Link to="/product">Products</Link>
-                  <Link to="/group">Countries</Link>
+                  <Link to="/" className="NavLink">Shades</Link>
+                  <Link to="/brand" className="NavLink">Brands</Link>
+                  <Link to="/product" className="NavLink">Products</Link>
+                  <Link to="/group" className="NavLink">Countries</Link>
                 </nav>
                 <main>
                   <Switch>
