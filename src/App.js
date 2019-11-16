@@ -1,16 +1,12 @@
 import React, {Component} from 'react';
 import './App.css';
-import Nav from './components/Nav/Nav'
-import Menu from './components/Menu/Menu'
-import Body from './components/Body/Body'
-import { Route, Link } from "react-router-dom";
+import Body from './components/Body/Body';
+import { Route, Link, Switch, Redirect } from "react-router-dom";
 
 class App extends Component {
   constructor(props){
     super(props);
     this.state = {
-      apiUrl: "http://localhost:4000/shades",
-      proxyUrl: "https://cors-anywhere.herokuapp.com/",
       shades: []
     };
     this.componentDidMount = this.componentDidMount.bind(this);
@@ -26,28 +22,57 @@ class App extends Component {
         .then(res => res.json())
         .then(res => {
           this.setState({ shades: res });
-          // console.log(res);
         }) 
         .catch(err => console.log(err)); 
       }
 
 
     render(){
-
-      let links = [
-        { label: 'Shades', link: '#', active: true },
-        { label: 'Brands', link: '#' },
-        { label: 'Products', link: '#' },
-        { label: 'Countries', link: '#' },
-      ];
-
+      console.log(this.state)
         return (
               <div className="App">
-                <Menu links={links} />
-                <Body shades={this.state.shades} />
-                <header className="Header">
-                  <h1>Makeup Shades</h1>
-                </header>
+
+                <nav className="Menu">
+                  <Link to="/">Shades</Link>
+                  <Link to="/brand">Brands</Link>
+                  <Link to="/product">Products</Link>
+                  <Link to="/country">Countries</Link>
+                </nav>
+                <main>
+                  <Switch>
+                    <Route 
+                      exact path="/"
+                      render={routerProps => (
+                        <Body 
+                          shades={this.state.shades}
+                          {...routerProps}
+                        />
+                      )}
+                    />
+                    {/* <Route
+                      path="/brand"
+                      render={routerProps => (
+                        <Brand />
+                      )}
+                    />
+                    <Route
+                      path="/product"
+                      render={routerProps => (
+                        <Product />
+                      )}
+                    />
+                    <Route
+                      path="/country"
+                      render={routerProps => (
+                        <Country />
+                      )}
+                    /> */}
+                  </Switch>
+                  <header className="Header">
+                    <h1>Makeup Shades</h1>
+                  </header>
+                </main>
+
               </div>
         )
     }

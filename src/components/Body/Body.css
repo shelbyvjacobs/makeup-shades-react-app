@@ -29,3 +29,27 @@ p {
     right: 0;
     font-family: 'Courier New', Courier, monospace;
 }
+
+.Menu {
+    background-color: black;
+    color: white;
+    /* display: flex;
+    justify-content: space-between; */
+    position: relative;
+    height: 80px;
+    width: 100vw;
+}
+
+a:hover {
+    cursor: crosshair;
+    border-bottom: 2px solid white;
+}
+
+a {
+    color: white;
+    font-size: 16px;
+    text-decoration: none;
+    text-transform: uppercase;
+    display: flex;
+    justify-content: center;
+}
