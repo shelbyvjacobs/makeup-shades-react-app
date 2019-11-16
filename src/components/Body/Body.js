@@ -4,47 +4,42 @@ import "./Body.css";
 import { Link } from "react-router-dom"
 import { conditionalExpression } from '@babel/types';
 
-// export default function Body(props) {
-//     let tileList = props.shades.map(index => {
-//       let Tile = {
-//         backgroundColor: `{index.hex}`
-//       };
-//       return (
-//         <div className="Tile" style={Tile} key={index.id}>
-//           <Link className="tileLink" to={`/shades/${index.parkCode}`}>
-//             {index.hex}
-//           </Link>
-//         </div>
-//       );
-//     });
-//     return <div className="tileContainer">{tileList}</div>;
-//   }
-
-// let tileList = props.shades.map(index => {
-//     let tileStyle = {
-//       backgroundColor: `{index.hex}`
-//     };
-
-const Body = ({shades}) => {
-    // {shades.map((color) =>
+export default function Body(props) {
+    let tileList = props.shades.map(shades => {
         let tileStyle = {
-            backgroundColor: `${shades.hex}`
-        }
-        console.log(shades)
-    // )}
-
-    // console.log(shades)
-    return (
-        <div className="Body">
-        {shades.map((shade) => (
-            <div className="Tile" style={tileStyle} key={shade.id}>
-            <p>{shade.hex}</p>
+            backgroundColor: `#${shades.hex}`
+        };
+        return (
+            <div className="Body">
+                <div className="Tile" style={tileStyle} key={shades.id}>
+                    <p>{shades.hex}</p>
+                </div>
             </div>
-        ))}
-        </div>
-    )
+        );
+    });
+    return <div>{tileList}</div>;
+  }
+
+// const Body = ({shades}) => {
+//     // {shades.map((color) =>
+//         let tileStyle = {
+//             backgroundColor: `#${shades.hex}`
+//         }
+//         console.log(shades)
+//     // )}
+
+//     // console.log(shades)
+//     return (
+//         <div className="Body">
+//         {shades.map((shade) => (
+//             <div className="Tile" style={tileStyle} key={shade.id}>
+//             <p>{shade.hex}</p>
+//             </div>
+//         ))}
+//         </div>
+//     )
 
 
-}
+// }
 
-export default Body;
+// export default Body;
