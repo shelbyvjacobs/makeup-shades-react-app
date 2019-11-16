@@ -1,16 +1,13 @@
 .Body {
     display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: space-between;
+    flex-flow: row wrap;
+    justify-content: center;
     align-content: flex-start;
-    width: 80%;
-    margin-left: 100px;
+    /* width: 80%;
+    margin-left: 100px; */
 }
 
 .Tile {
-    /* border: 1px solid black; */
-    background-color: #ffd3be;
     width: 19%;
     padding-top: 19%;
     top: 65px;
