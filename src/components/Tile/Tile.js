@@ -26,7 +26,7 @@ import { Link } from "react-router-dom"
 export default function Tile(props) {
     let tileList = props.shades.map(index => {
       let Tile = {
-        backgroundColor: `{index.hex}`
+        backgroundColor: `${index.hex}`
       };
       return (
         <div className="Tile" style={Tile} key={index.id}>

@@ -1,7 +1,7 @@
 .App-header {
   position: absolute;
-  top: 250px;
-  left: -250px;
+  top: 300px;
+  left: -275px;
 }
 
 h1 {
@@ -11,4 +11,5 @@ h1 {
   -ms-transform: rotate(-90deg);
   -o-transform: rotate(-90deg);
   font-size: 80px;
+  font-family: 'Montserrat', sans-serif;
 }

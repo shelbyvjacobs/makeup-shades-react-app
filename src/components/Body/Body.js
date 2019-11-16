@@ -2,6 +2,7 @@ import React from 'react';
 import "./Body.css";
 // import Tile from "../Tile/Tile";
 import { Link } from "react-router-dom"
+import { conditionalExpression } from '@babel/types';
 
 // export default function Body(props) {
 //     let tileList = props.shades.map(index => {
@@ -19,10 +20,20 @@ import { Link } from "react-router-dom"
 //     return <div className="tileContainer">{tileList}</div>;
 //   }
 
+// let tileList = props.shades.map(index => {
+//     let tileStyle = {
+//       backgroundColor: `{index.hex}`
+//     };
+
 const Body = ({shades}) => {
-    let tileStyle = {
-        backgroundColor: `{shades.hex}`
-    }
+    // {shades.map((color) =>
+        let tileStyle = {
+            backgroundColor: `${shades.hex}`
+        }
+        console.log(shades)
+    // )}
+
+    // console.log(shades)
     return (
         <div className="Body">
         {shades.map((shade) => (
@@ -32,6 +43,8 @@ const Body = ({shades}) => {
         ))}
         </div>
     )
+
+
 }
 
 export default Body;

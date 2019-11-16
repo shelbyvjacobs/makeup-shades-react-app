@@ -25,7 +25,7 @@ class App extends Component {
         .then(res => res.json())
         .then(res => {
           this.setState({ shades: res });
-          console.log(res);
+          // console.log(res);
         }) 
         .catch(err => console.log(err)); 
       }

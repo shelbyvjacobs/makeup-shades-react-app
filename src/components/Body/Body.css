@@ -9,7 +9,8 @@
 }
 
 .Tile {
-    background-color: #f3cfb3;
+    /* border: 1px solid black; */
+    background-color: #ffd3be;
     width: 19%;
     padding-top: 19%;
     top: 65px;
@@ -19,7 +20,7 @@
 }
 
 .Tile:hover {
-    opacity: 0.5;
+    opacity: 0.7;
     cursor: crosshair;
 }
 
@@ -29,4 +30,5 @@ p {
     left: 5px;
     bottom: 0;
     right: 0;
+    font-family: 'Courier New', Courier, monospace;
 }
