@@ -1,4 +1,5 @@
 import React from 'react';
+import { Route, Link, Switch, Redirect } from "react-router-dom";
 
 export default function Body(props) {
     let tileList = props.shades.map(shades => {
@@ -8,8 +9,7 @@ export default function Body(props) {
         return (
             <div className="Body">
                 <div className="Tile" style={tileStyle} key={shades.id}>
-                    <p>{shades.hex}</p>
-                    {/* make each p tag into a link to the page for that hex */}
+                    <Link to="/hex/:hex" className="HexCode">{shades.hex}</Link>
                 </div>
             </div>
         );
