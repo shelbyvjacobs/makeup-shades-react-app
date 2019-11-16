@@ -6,21 +6,21 @@ class Nav extends Component {
         super();
 
         this.state = {
-            showForm: false
+            showMenu: false
         };
+    this.showMenu = this.showMenu.bind(this);
     }
 
-    showForm() {
+    showMenu() {
         this.setState({
-            showForm: !this.state.showForm
+            showMenu: !this.state.showMenu
         });
     }
 
     render() {
-
         let linksMarkup = this.props.links.map((link, index) => {
             let linkMarkup = link.active ? (
-                <a className="MenuLink" href={link.link}>{link.label}</a>
+                <a className="MenuLink MenuLinkActive" href={link.link}>{link.label}</a>
             ) : (
                 <a className="MenuLink" href={link.link}>{link.label}</a>
             );
@@ -32,9 +32,22 @@ class Nav extends Component {
             );
         });
 
-        return (
+        if (this.state.showMenu = false) {
+          return (
             <nav className="Nav">
-                <div className="Hamburger"></div>
+                <div className="Hamburger" onClick={this.showMenu}></div>
+
+                <div className="Menu Hidden">
+                    <ul className="MenuList">
+                        {linksMarkup}
+                    </ul>
+                </div>
+            </nav>
+        );
+        } else if (this.state.showMenu = true) {
+          return (
+            <nav className="Nav">
+                <div className="Hamburger" onClick={this.showMenu}></div>
 
                 <div className="Menu">
                     <ul className="MenuList">
@@ -43,6 +56,7 @@ class Nav extends Component {
                 </div>
             </nav>
         );
+        }
     }
 }
 

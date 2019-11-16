@@ -34,10 +34,10 @@ class App extends Component {
     render(){
 
       let links = [
-        { label: 'Home', link: '#home', active: true },
-        { label: 'About', link: '#about' },
-        { label: 'Portfolio', link: '#portfolio' },
-        { label: 'Contact Us', link: '#contact-us' },
+        { label: 'Shades', link: '#', active: true },
+        { label: 'Brands', link: '#' },
+        { label: 'Products', link: '#' },
+        { label: 'Countries', link: '#' },
       ];
 
         return (
