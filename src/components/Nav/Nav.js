@@ -2,8 +2,8 @@ import React, { Component } from 'react';
 import './Nav.css';
 
 class Nav extends Component {
-    constructor() {
-        super();
+    constructor(props) {
+        super(props);
 
         this.state = {
             showMenu: false
@@ -32,31 +32,25 @@ class Nav extends Component {
             );
         });
 
-        if (this.state.showMenu = false) {
-          return (
-            <nav className="Nav">
-                <div className="Hamburger" onClick={this.showMenu}></div>
+        const menuOpen = this.state.showMenu;
+        let hamburger;
 
-                <div className="Menu Hidden">
-                    <ul className="MenuList">
-                        {linksMarkup}
-                    </ul>
-                </div>
-            </nav>
-        );
-        } else if (this.state.showMenu = true) {
-          return (
-            <nav className="Nav">
-                <div className="Hamburger" onClick={this.showMenu}></div>
+        if (menuOpen) {
+          hamburger = <div className="Hamburger Hidden" onClick={this.showMenu}></div>;
+        } else {
+          hamburger = <div className="Hamburger" onClick={this.showMenu}></div>;
+        };
 
+        return (
+            <nav className="Nav">
+                {hamburger}
                 <div className="Menu">
                     <ul className="MenuList">
                         {linksMarkup}
                     </ul>
                 </div>
             </nav>
-        );
-        }
+        )
     }
 }
 

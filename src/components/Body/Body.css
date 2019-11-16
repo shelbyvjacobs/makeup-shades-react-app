@@ -3,14 +3,14 @@
     flex-flow: row wrap;
     justify-content: center;
     align-content: flex-start;
-    /* width: 80%;
-    margin-left: 100px; */
 }
 
 .Tile {
-    width: 19%;
-    padding-top: 19%;
-    top: 65px;
+    /* width: 19%;
+    padding-top: 19%; */
+    width: 75%;
+    height: 50px;
+    top: 75px;
     position: relative;
     display: inline-block;
     margin: 0 auto;
