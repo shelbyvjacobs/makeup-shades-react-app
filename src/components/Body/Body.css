@@ -53,3 +53,10 @@ a {
     display: flex;
     justify-content: center;
 }
+
+.link {
+    color: black;
+    position: absolute;
+    top: 150px;
+    text-transform: none;
+}

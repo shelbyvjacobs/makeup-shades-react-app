@@ -27,11 +27,9 @@ class App extends Component {
           this.setState({ shades: res });
         }) 
         .catch(err => console.log(err)); 
-      }
-
+    }
 
     render(){
-      console.log(this.state)
         return (
               <div className="App">
 
@@ -39,7 +37,7 @@ class App extends Component {
                   <Link to="/">Shades</Link>
                   <Link to="/brand">Brands</Link>
                   <Link to="/product">Products</Link>
-                  <Link to="/country">Countries</Link>
+                  <Link to="/group">Countries</Link>
                 </nav>
                 <main>
                   <Switch>
@@ -55,7 +53,10 @@ class App extends Component {
                     <Route
                       path="/brand"
                       render={routerProps => (
-                        <Brand />
+                        <Brand 
+                          shades={this.state.brand}
+                          {...routerProps}
+                        />
                       )}
                     />
                     <Route
@@ -65,7 +66,7 @@ class App extends Component {
                       )}
                     />
                     <Route
-                      path="/country"
+                      path="/group"
                       render={routerProps => (
                         <Country />
                       )}
