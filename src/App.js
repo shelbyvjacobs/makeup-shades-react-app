@@ -1,6 +1,7 @@
 import React, {Component} from 'react';
 import './App.css';
 import Nav from './components/Nav/Nav'
+import Menu from './components/Menu/Menu'
 import Body from './components/Body/Body'
 import { Route, Link } from "react-router-dom";
 
@@ -42,7 +43,7 @@ class App extends Component {
 
         return (
               <div className="App">
-                <Nav links={links} />
+                <Menu links={links} />
                 <Body shades={this.state.shades} />
                 <header className="Header">
                   <h1>Makeup Shades</h1>

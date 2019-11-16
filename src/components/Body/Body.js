@@ -1,6 +1,5 @@
 import React from 'react';
 import "./Body.css";
-// import Tile from "../Tile/Tile";
 import { Link } from "react-router-dom"
 import { conditionalExpression } from '@babel/types';
 
@@ -19,27 +18,3 @@ export default function Body(props) {
     });
     return <div>{tileList}</div>;
   }
-
-// const Body = ({shades}) => {
-//     // {shades.map((color) =>
-//         let tileStyle = {
-//             backgroundColor: `#${shades.hex}`
-//         }
-//         console.log(shades)
-//     // )}
-
-//     // console.log(shades)
-//     return (
-//         <div className="Body">
-//         {shades.map((shade) => (
-//             <div className="Tile" style={tileStyle} key={shade.id}>
-//             <p>{shade.hex}</p>
-//             </div>
-//         ))}
-//         </div>
-//     )
-
-
-// }
-
-// export default Body;
