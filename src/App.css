@@ -21,10 +21,13 @@ h1 {
   align-content: flex-start;
 }
 
-.CreateForm {
-  position: relative;
-  top: 20px;
-  text-align: center;
+.Forms {
+  display: flex;
+  justify-content: center;
+}
+
+.CreateForm, .UpdateForm {
+  padding: 30px 20px 0px 10px;
 }
 
 .Tile {
@@ -55,6 +58,11 @@ h1 {
 
 .HexCode {
   cursor: crosshair;
+}
+
+.DeleteButton {
+  position: absolute;
+  right: 5px;
 }
 
 .Menu {
