@@ -1,6 +1,9 @@
 import React, {Component} from 'react';
 import './App.css';
 import Body from './components/Body/Body';
+import Create from './components/Create Form/Create';
+import Update from './components/Update Form/Update';
+import Delete from './components/Delete Form/Delete';
 import Brand from './components/Brand/Brand';
 import Product from './components/Product/Product';
 import Country from './components/Country/Country';
@@ -45,10 +48,17 @@ class App extends Component {
                     <Route 
                       exact path="/"
                       render={routerProps => (
-                        <Body 
-                          shades={this.state.shades}
-                          {...routerProps}
-                        />
+                        <div>
+                          <div className="Forms">
+                            <Create />
+                            <Update />
+                            <Delete />
+                          </div>
+                          <Body 
+                            shades={this.state.shades}
+                            {...routerProps}
+                          />
+                        </div>
                       )}
                     />
                     <Route
