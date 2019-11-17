@@ -7,14 +7,13 @@ import Delete from './components/Delete Form/Delete';
 import Brand from './components/Brand/Brand';
 import Product from './components/Product/Product';
 import Country from './components/Country/Country';
-import { Route, Link, Switch, Redirect } from "react-router-dom";
+import { Route, Link, Switch } from "react-router-dom";
 
 class App extends Component {
   constructor(props){
     super(props);
     this.state = {
-      shades: [],
-      brands: []
+      shades: []
     };
     this.componentDidMount = this.componentDidMount.bind(this);
   }
@@ -65,7 +64,7 @@ class App extends Component {
                       path="/brand"
                       render={routerProps => (
                         <Brand 
-                          shades={this.state.brand}
+                          shades={this.state.shades}
                           {...routerProps}
                         />
                       )}

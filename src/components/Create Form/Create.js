@@ -1,23 +1,32 @@
-// Class component
-
 import React, {Component} from "react";
+import axios from "axios";
 
 class Create extends Component {
-    constructor() {
-        super();
+    constructor(props) {
+        super(props);
         this.state = {
 
         }
     }
-    //functionality
+
+    handleChange = (evt) => {
+        evt.preventDefault()
+        console.log("handlin' that change")
+    }
+
+    handleSubmit = (evt) => {
+        evt.preventDefault()
+        console.log("you submitted!")
+    }
+
     render(){
         return (
             <div className="Forms">
-                <form className="CreateForm">
+                <form className="CreateForm" onSubmit={this.handleSubmit}>
                     Create a Shade: <br/>
-                    <input type="text" placeholder="Brand"></input><br/>
-                    <input type="text" placeholder="Product"></input><br/>
-                    <input type="text" placeholder="Hex Code"></input><br/>
+                    <input type="text" name="brand" placeholder="Brand" onChange={this.handleChange}></input><br/>
+                    <input type="text" name="product" placeholder="Product" onChange={this.handleChange}></input><br/>
+                    <input type="text" name="hex" placeholder="Hex Code" onChange={this.handleChange}></input><br/>
                     <input type="submit" value="Submit"></input>
                 </form>
             </div>

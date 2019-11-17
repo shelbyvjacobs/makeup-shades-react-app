@@ -1,5 +1,5 @@
 import React from 'react';
-import { Route, Link, Switch, Redirect } from "react-router-dom";
+import { Link } from "react-router-dom";
 
 export default function Body(props) {
     let tileList = props.shades.map(shades => {
