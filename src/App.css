@@ -21,6 +21,12 @@ h1 {
   align-content: flex-start;
 }
 
+.CreateForm {
+  position: relative;
+  top: 20px;
+  text-align: center;
+}
+
 .Tile {
   width: 75%;
   height: 50px;

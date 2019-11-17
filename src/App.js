@@ -10,7 +10,8 @@ class App extends Component {
   constructor(props){
     super(props);
     this.state = {
-      shades: []
+      shades: [],
+      brands: []
     };
     this.componentDidMount = this.componentDidMount.bind(this);
   }

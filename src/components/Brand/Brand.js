@@ -1,5 +1,4 @@
 import React from 'react';
-import "./Brand.css";
 import { Link } from "react-router-dom"
 
 export default function Brand(props) {

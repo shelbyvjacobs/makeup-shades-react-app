@@ -14,5 +14,15 @@ export default function Body(props) {
             </div>
         );
     });
-    return <div>{tileList}</div>;
+    return  (
+    <div>
+        <form className="CreateForm">
+            Add a Shade: <br/><input type="text" placeholder="Brand"></input><br/>
+            <input type="text" placeholder="Product"></input><br/>
+            <input type="text" placeholder="Hex Code"></input><br/>
+            <input type="submit" value="submit"></input>
+        </form>
+        <div>{tileList}</div>
+    </div>
+    )
   }
