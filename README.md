@@ -6,7 +6,7 @@ This app utilizes React and the Makeup Shades API (available [here](https://gith
 The Makeup Shades API contains information about makeup foundation colors in the United States, Nigeria, India, and Japan. Each object contains information on the brand, the product name, the hexidecimal color code, HSL and HSV color codes, and the the country where it is most popular.
 
 ## Getting Started
-This app is deployed [here]().
+This app is deployed [here](https://tender-cray-bf4fad.netlify.com/).
 
 Please visit the site and explore all of the makeup shades! The forms at the top of the Shades page (the main page) allow you to create, update, or delete shades. Simply enter the information prompted and click the submit button!
 
