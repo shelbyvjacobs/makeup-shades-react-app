@@ -12,6 +12,7 @@ class Create extends Component {
     handleChange = (evt) => {
         evt.preventDefault()
         console.log("handlin' that change")
+        this.setState({ [evt.target.name]: evt.target.value });
     }
 
     handleSubmit = (evt) => {

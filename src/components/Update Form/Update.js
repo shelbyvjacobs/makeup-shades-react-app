@@ -12,6 +12,7 @@ class Update extends Component {
     handleChange = (evt) => {
         evt.preventDefault()
         console.log("handlin' that change")
+        this.setState({ [evt.target.name]: evt.target.value });
     }
 
     handleSubmit = (evt) => {
@@ -24,7 +25,7 @@ class Update extends Component {
             <div className="Forms">
                 <form className="CreateForm" onSubmit={this.handleSubmit}>
                     Update a Shade: <br/>
-                    <input type="text" name="hex" placeholder="Current Hex Code" onChange={this.handleChange}></input><br/>
+                    <input type="text" name="hex" placeholder="ID" onChange={this.handleChange}></input><br/>
                     <input type="text" name="hex" placeholder="New Hex Code" onChange={this.handleChange}></input><br/>
                     <input type="submit" value="Submit"></input>
                 </form>

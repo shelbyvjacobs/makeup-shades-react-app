@@ -5,18 +5,30 @@ class Delete extends Component {
     constructor(props) {
         super(props);
         this.state = {
-            hex: ""
+            id: ""
         }
     }
 
     handleChange = (evt) => {
         evt.preventDefault();
         console.log("handlin' that change")
+        this.setState({ [evt.target.name]: evt.target.value });
     }
 
     handleSubmit = (evt) => {
         evt.preventDefault();
-        console.log("You submitted!")
+        console.log(this.state)
+        axios
+            .delete(
+                `http://localhost:4000/shades/${this.state.id}`,
+                this.state
+            )
+            .then(response => {
+                console.log(response);
+            })
+            .catch(error => {
+                console.log(error);
+            });
     }
 
     render(){
@@ -24,7 +36,7 @@ class Delete extends Component {
             <div className="Forms">
                 <form className="CreateForm" onSubmit={this.handleSubmit}>
                     Delete a Shade: <br/>
-                    <input type="text" name="hex" placeholder="Hex Code" onChange={this.handleChange}></input><br/>
+                    <input type="text" name="id" placeholder="ID" onChange={this.handleChange}></input><br/>
                     <input type="submit" value="Submit"></input>
                 </form>
             </div>
