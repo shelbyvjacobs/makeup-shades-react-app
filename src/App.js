@@ -13,7 +13,8 @@ class App extends Component {
   constructor(props){
     super(props);
     this.state = {
-      shades: []
+      shades: [],
+      ids: []
     };
     this.componentDidMount = this.componentDidMount.bind(this);
   }
@@ -54,6 +55,7 @@ class App extends Component {
                             <Delete />
                           </div>
                           <Body 
+                            key={this.state.ids}
                             shades={this.state.shades}
                             {...routerProps}
                           />
