@@ -21,6 +21,7 @@ class App extends Component {
 
     componentDidMount(){
         fetch ("http://localhost:4000/shades", {
+        // fetch ("https://makeup-shades-api.herokuapp.com/shades", {
           headers: {
             'Accept': "application/json"
           }

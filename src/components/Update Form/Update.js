@@ -22,6 +22,7 @@ class Update extends Component {
         axios
             .get(
                 `http://localhost:4000/shades/${this.state.id}/edit`,
+                // `https://makeup-shades-api.herokuapp.com/shades/${this.state.id}/edit`,
                 this.state
             )
             .then(response => {

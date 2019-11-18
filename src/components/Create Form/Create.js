@@ -22,6 +22,7 @@ class Create extends Component {
         console.log(this.state)
         axios
             .post(`http://localhost:4000/shades`,
+            // .post(`https://makeup-shades-api.herokuapp.com/shades`),
                 this.state
             )
             .then(response => {

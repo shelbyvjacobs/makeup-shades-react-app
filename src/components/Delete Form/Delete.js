@@ -21,6 +21,7 @@ class Delete extends Component {
         axios
             .delete(
                 `http://localhost:4000/shades/${this.state.id}`,
+                // `https://makeup-shades-api.herokuapp.com/shades/${this.state.id}`,
                 this.state
             )
             .then(response => {
