@@ -5,7 +5,9 @@ class Create extends Component {
     constructor(props) {
         super(props);
         this.state = {
-
+            brand: "",
+            product: "",
+            hex: ""
         }
     }
 
@@ -17,7 +19,17 @@ class Create extends Component {
 
     handleSubmit = (evt) => {
         evt.preventDefault()
-        console.log("you submitted!")
+        console.log(this.state)
+        axios
+            .post(`http://localhost:4000/shades`,
+                this.state
+            )
+            .then(response => {
+                console.log(response);
+            })
+            .catch(error => {
+                console.log(error);
+            });
     }
 
     render(){
